@@ -1,0 +1,26 @@
+# Python virtual environment
+backend/venv/
+
+# Node.js dependencies
+frontend/node_modules/
+
+# Next.js build files
+frontend/.next/
+
+# OS and editor-specific files
+.DS_Store
+*.log
+
+# Environment variables
+*.env
+
+# Weaviate DB or large data
+weaviate/data/
+
+# Optional: Ignore compiled Python files
+__pycache__/
+*.py[cod]
+
+# Optional: Ignore database files if generated locally
+*.sqlite3
+*.db
