@@ -31,20 +31,22 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python app.py
+```
 
 2. **Frontend**
-
+```
 cd frontend
 npm install
 npm run dev
-
+```
 3. **Vector DB**
-
+```
 docker-compose up -d
+```
 
 
-📁 Folder Structure
-
+## 📁 Folder Structure
+```
 html-search-spa/
 ├── backend/
 │ ├── app.py
@@ -61,6 +63,7 @@ html-search-spa/
 │ ├── docker-compose.yml
 ├── README.md
 ├── .gitignore
+```
 
 ## 🐙 To Push to GitHub
 
