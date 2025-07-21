@@ -2,6 +2,10 @@
 
 A full-stack semantic search tool for crawling, chunking, and vectorizing HTML content from any public website URL.
 
+### 🎥 Demo
+
+![HTML Search Demo](./demo/demo.gif)
+
 ### 🌐 Features
 
 - Accepts any public website URL.
@@ -73,4 +77,8 @@ git add .
 git commit -m "Initial commit: HTML Search SPA"
 git remote add origin https://github.com/your-username/your-repo.git
 git push -u origin main
+```
 
+## 📃 License
+
+MIT License © 2025 Sayan Debnath
