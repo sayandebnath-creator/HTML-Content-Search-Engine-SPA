@@ -67,9 +67,10 @@ html-search-spa/
 
 ## To Push to GitHub
 
-### 1. Initialize Git
-
 ```bash
 git init
 git add .
 git commit -m "Initial commit: HTML Search SPA"
+git remote add origin https://github.com/your-username/your-repo.git
+git push -u origin main
+
