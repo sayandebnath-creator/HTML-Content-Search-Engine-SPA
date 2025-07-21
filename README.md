@@ -17,7 +17,7 @@ A full-stack semantic search tool for crawling, chunking, and vectorizing HTML c
 - Frontend: React + TailwindCSS
 - Backend: Python (Flask)
 - Vector DB: Weaviate
-- NLP Embedding: OpenAI / HuggingFace (based on config)
+- NLP Embedding: HuggingFace SentenceTransformer (all-MiniLM-L6-v2)
 
 ---
 
