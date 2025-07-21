@@ -65,7 +65,7 @@ html-search-spa/
 ├── .gitignore
 ```
 
-## 🐙 To Push to GitHub
+## To Push to GitHub
 
 ### 1. Initialize Git
 
