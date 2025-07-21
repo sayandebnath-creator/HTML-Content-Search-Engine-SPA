@@ -9,6 +9,7 @@ export default function Home() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [openIndex, setOpenIndex] = useState(null);
 
   const handleSearch = async () => {
     if (!url || !query) return;
@@ -127,18 +128,38 @@ export default function Home() {
               {results.map((res, i) => (
                 <div key={i} className="border-b border-gray-200 pb-4">
                   <div className="mb-2">
-                    <h3 className="text-lg text-blue-600 hover:underline cursor-pointer font-medium">
+                    <div className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-md inline-block mb-2 font-semibold">
+                      {res.score}% match
+                    </div>
+
+                    <h3 className="text-lg text-blue-600 font-medium">
                       Result {i + 1}
                     </h3>
-                    <div className="text-sm text-green-700">
+                    <div className="text-sm text-green-700 mb-1">
                       Content excerpt
                     </div>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {res.content.split('.').slice(0, 2).join('. ') + '.'}
+                    </p>
                   </div>
-                  <p className="text-gray-700 text-sm leading-relaxed">
-                    {res.content.slice(0, 300)}...
-                  </p>
+
+                  {/* Toggle Button */}
+                  <button
+                    onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                    className="text-blue-500 text-sm mb-2 hover:underline"
+                  >
+                    {openIndex === i ? "▲ Hide HTML" : "▼ View HTML"}
+                  </button>
+
+                  {/* HTML Preview */}
+                  {openIndex === i && (
+                    <div className="bg-gray-50 border border-gray-200 rounded-md p-4 overflow-x-auto max-h-[300px] text-sm text-gray-800 whitespace-pre-wrap">
+                      <pre><code>{res.html}</code></pre>
+                    </div>
+                  )}
                 </div>
               ))}
+
             </div>
           </div>
         )}
