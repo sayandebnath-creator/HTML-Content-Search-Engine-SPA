@@ -54,7 +54,7 @@ export default function Home() {
             <span className="text-green-500">i</span>
             <span className="text-red-500">t</span>
             <span className="text-yellow-500">e </span>
-            Content Search
+            Search Engine
           </h1>
         </div>
 
